@@ -1,4 +1,4 @@
-# Formastor Projesi
+# Formastore Projesi
 
 Bu proje, Bertuğ ve ekibinin frontend odaklı bir kullanıcı giriş/kayıt sistemi ve profil ekranı geliştirme çalışmasıdır.
 
