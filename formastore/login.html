@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Giriş Yap</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <form onsubmit="event.preventDefault(); loginUser();">
+    <h2>Giriş Yap</h2>
+
+    <label for="username">Kullanıcı Adı:</label>
+    <input type="text" id="username" required>
+
+    <label for="password">Şifre:</label>
+    <input type="password" id="password" required>
+
+    <div id="errorMessage" class="error"></div>
+
+    <button type="submit">Giriş Yap</button>
+  </form>
+
+  <script>
+    function loginUser() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const errorDiv = document.getElementById("errorMessage");
+
+      // Basit kontrol: örnek kullanıcı adı ve şifre
+      const correctUsername = "Furkancam";
+      const correctPassword = "123456";
+
+      if (username === correctUsername && password === correctPassword) {
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("username", username);
+        window.location.href = "profile.html";
+      } else {
+        errorDiv.textContent = "❌ Yanlış Şifre Veya Kullanıcı Adı";
+      }
+    }
+  </script>
+
+</body>
+</html>

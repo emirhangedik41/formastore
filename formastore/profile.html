@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    #welcomeMessage {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    #usernameDisplay {
+      font-size: 20px;
+      color: #555;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Profil Sayfası</h1>
+  </header>
+
+  <main>
+    <div id="welcomeMessage">Hoş geldin!</div>
+    <div id="usernameDisplay"></div>
+    <button onclick="logout()">Çıkış Yap</button>
+  </main>
+
+  <script>
+    const username = localStorage.getItem("username");
+    const welcome = document.getElementById("welcomeMessage");
+    const usernameDisplay = document.getElementById("usernameDisplay");
+
+    if (username) {
+      welcome.textContent = "Hoş geldin!";
+      usernameDisplay.textContent = username;
+    } else {
+      welcome.textContent = "Hoş geldin!";
+      usernameDisplay.textContent = "(Kullanıcı adı bulunamadı)";
+    }
+
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("username");
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
