@@ -11,4 +11,3 @@ Bu proje, Bertuğ ve ekibinin frontend odaklı bir kullanıcı giriş/kayıt sis
 - JavaScript ile localStorage üzerinden oturum yönetimi
 - Çıkış yapma özelliği
 
-## 📁 Dosya Yapısı
