@@ -1,0 +1,114 @@
+/* --- 1. Sayfa Genel Ayarları --- */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Yatay kaydırmayı engellemek için 'hidden' daha uygun olabilir */
+    overflow-y: auto;
+    font-family: sans-serif; /* Okunabilirliği artırmak için genel bir font ekledim */
+}
+
+/* --- 2. Ana Header (Üst Navigasyon Çubuğu) --- */
+.main-header {
+    background-color: #1a1a1a; /* Görseldeki koyu arka plan rengi varsayımı */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #4CAF50; /* Görseldeki yeşil çizgi varsayımı */
+}
+
+.header-content {
+    max-width: 1200px; /* Maksimum genişlik */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Sol ve sağ kısımları ayır */
+    align-items: center;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Stili */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 30px; /* Menüden ayırmak için */
+}
+
+/* Ana Navigasyon Listesi */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-right: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.main-nav a:hover {
+    color: #4CAF50; /* Hover rengi */
+}
+
+/* Sağdaki Normal Navigasyon Öğeleri */
+.nav-item {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9em;
+    margin-left: 20px;
+}
+
+.nav-item:hover {
+    color: #4CAF50;
+}
+
+/* İstenen ÜYE OL Butonu Stili */
+.btn-uye-ol {
+    background-color: #ffffff; /* Beyaz arka plan */
+    color: #1a1a1a; /* Koyu yazı rengi */
+    padding: 6px 12px; /* Boyutları ayarla */
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: 15px;
+    border: 2px solid #ffcc00; /* Hafif bir çerçeve ekleyelim (görseldeki gibi durması için) */
+}
+
+.btn-uye-ol:hover {
+    background-color: #ffcc00; /* Hover'da sarı olabilir */
+    color: #1a1a1a;
+}
+
+.lang-switcher {
+    font-size: 0.85em;
+    margin-left: 15px;
+}
+
+.nav-icon {
+    margin-left: 15px;
+    color: #ffffff;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+/* --- 3. Banner Alanı --- */
+#banner {
+    width: 100%;
+    /* display: flex ve justify-content: center; kaldırıldı çünkü 
+       banner.jpeg zaten tam ekran kaplayacak şekilde ayarlanmalı */
+    text-align: center; /* İçerik merkezlenmesi için */
+}
+
+#banner img {
+    width: 100%;
+    height: auto; /* Oranları korumak için */
+    display: block;
+}
